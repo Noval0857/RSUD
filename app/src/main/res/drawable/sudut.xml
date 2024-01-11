@@ -1,0 +1,20 @@
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Shadow layer -->
+    <item>
+        <shape>
+            <solid android:color="#66000000" /> <!-- Adjust the alpha value to control the darkness of the shadow -->
+            <corners android:radius="4dp" /> <!-- Adjust the radius as needed -->
+        </shape>
+    </item>
+
+    <!-- Main content layer -->
+    <item android:left="1dp" android:top="1dp" android:right="1dp" android:bottom="1dp">
+        <shape>
+            <solid android:color="@color/white" /> <!-- Replace with your desired background color -->
+            <corners android:radius="4dp" /> <!-- Adjust the radius as needed -->
+            <stroke
+                android:width="2dp"
+                android:color="#15AFA7" /> <!-- Adjust the stroke properties as needed -->
+        </shape>
+    </item>
+</layer-list>

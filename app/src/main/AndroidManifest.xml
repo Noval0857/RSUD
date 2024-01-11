@@ -19,9 +19,6 @@
             android:name=".Daftar.DaftarInapActivity"
             android:exported="false" />
         <activity
-            android:name=".Home.HomeActivity"
-            android:exported="false" />
-        <activity
             android:name=".MainActivity"
             android:exported="false"
             android:screenOrientation="fullSensor" />
