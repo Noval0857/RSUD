@@ -2,6 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -11,23 +12,25 @@
         android:roundIcon="@drawable/logorsud"
         android:supportsRtl="true"
         android:theme="@style/Theme.RSUD"
-        tools:targetApi="31">
+        tools:targetApi="31"
+        >
         <activity
-            android:name=".Daftar.DaftarPoliKlinikActivity"
+            android:name=".daftar.DaftarPoliKlinikActivity"
             android:exported="false" />
         <activity
-            android:name=".Apotek.ApotekActivity"
+            android:name=".apotek.ApotekActivity"
             android:exported="false" />
         <activity
-            android:name=".Daftar.DaftarJalanActivity"
+            android:name=".daftar.DaftarJalanActivity"
             android:exported="false" />
         <activity
-            android:name=".Daftar.DaftarInapActivity"
+            android:name=".daftar.DaftarInapActivity"
             android:exported="false" />
         <activity
             android:name=".MainActivity"
             android:exported="false"
-            android:screenOrientation="fullSensor" />
+            android:screenOrientation="fullSensor"
+            />
         <activity
             android:name=".SplashScreen"
             android:exported="true">
