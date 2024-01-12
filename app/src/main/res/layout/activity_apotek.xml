@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Daftar.DaftarJalanActivity">
+    tools:context=".Apotek.ApotekActivity">
 
     <androidx.appcompat.widget.AppCompatImageButton
         android:layout_width="20dp"
@@ -22,7 +22,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:text="Daftar Rawat Jalan"
+        android:text="Apotik"
         android:textAlignment="center"
         android:textSize="32sp"
         android:textStyle="bold"/>

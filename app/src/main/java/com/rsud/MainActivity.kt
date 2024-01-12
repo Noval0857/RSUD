@@ -3,9 +3,9 @@ package com.rsud
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.View
 import androidx.appcompat.widget.AppCompatButton
 import com.rsud.Daftar.DaftarInapActivity
+import com.rsud.Daftar.DaftarJalanActivity
 
 class MainActivity : AppCompatActivity() {
 
@@ -20,6 +20,13 @@ class MainActivity : AppCompatActivity() {
             // Membuat Intent untuk berpindah ke DaftarInapActivity
             val intent = Intent(this, DaftarInapActivity::class.java)
             // Memulai aktivitas baru
+            startActivity(intent)
+        }
+
+        val pindahJalanActivity : AppCompatButton = findViewById(R.id.pindah1)
+
+        pindahJalanActivity.setOnClickListener {
+            val intent = Intent(this, DaftarJalanActivity::class.java)
             startActivity(intent)
         }
     }
