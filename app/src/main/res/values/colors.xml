@@ -4,4 +4,8 @@
     <color name="white">#FFFFFFFF</color>
     <color name="green">#4B850C</color>
     <color name="greenblue">#15AFA7</color>
+    <color name="rawat_jalan">#D6F6FF</color>
+    <color name="rawat_inap">#DCEDF9</color>
+    <color name="apotik">#F5E1E9</color>
+    <color name="poli_klinik">#FAF0DB</color>
 </resources>

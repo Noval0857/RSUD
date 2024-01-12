@@ -1,11 +1,11 @@
 package com.rsud
 
-import android.content.Intent
+import GridAdapter
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import androidx.appcompat.widget.AppCompatButton
-import com.rsud.Daftar.DaftarInapActivity
-import com.rsud.Daftar.DaftarJalanActivity
+import androidx.recyclerview.widget.GridLayoutManager
+import androidx.recyclerview.widget.RecyclerView
+import com.rsud.item.GridItem
 
 class MainActivity : AppCompatActivity() {
 
@@ -13,21 +13,16 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val pindahButton: AppCompatButton = findViewById(R.id.pindah)
+        val recyclerView: RecyclerView = findViewById(R.id.recyclerView)
+        val gridItems = listOf(
+            GridItem("Rawat Inap", R.drawable.rawatinap, R.color.rawat_inap),
+            GridItem("Rawat Jalan", R.drawable.docter, R.color.rawat_jalan),
+            GridItem("Poli Klinik", R.drawable.poliklinik, R.color.poli_klinik),
+            GridItem("Apotik", R.drawable.apotik, R.color.apotik)
+        )
 
-        // Menambahkan listener untuk klik pada tombol
-        pindahButton.setOnClickListener {
-            // Membuat Intent untuk berpindah ke DaftarInapActivity
-            val intent = Intent(this, DaftarInapActivity::class.java)
-            // Memulai aktivitas baru
-            startActivity(intent)
-        }
-
-        val pindahJalanActivity : AppCompatButton = findViewById(R.id.pindah1)
-
-        pindahJalanActivity.setOnClickListener {
-            val intent = Intent(this, DaftarJalanActivity::class.java)
-            startActivity(intent)
-        }
+        val adapter = GridAdapter(gridItems)
+        recyclerView.adapter = adapter
+        recyclerView.layoutManager = GridLayoutManager(this, 2)
     }
 }
