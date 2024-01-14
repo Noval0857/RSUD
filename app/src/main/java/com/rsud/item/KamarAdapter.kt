@@ -10,6 +10,12 @@ import com.rsud.R
 class KamarAdapter(private val gridKamar: List<GridKamar>) :
     RecyclerView.Adapter<KamarAdapter.GridViewHolder>() {
 
+    private var onItemClick: ((Int) -> Unit)? = null
+
+    fun setOnItemClickListener(listener: (Int) -> Unit) {
+        onItemClick = listener
+    }
+
     class GridViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val t1: TextView = itemView.findViewById(R.id.t1)
         val t2: TextView = itemView.findViewById(R.id.t2)
@@ -19,7 +25,15 @@ class KamarAdapter(private val gridKamar: List<GridKamar>) :
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): GridViewHolder {
         val view = LayoutInflater.from(parent.context)
             .inflate(R.layout.grid_kamar, parent, false)
-        return GridViewHolder(view)
+
+        val viewHolder = GridViewHolder(view)
+
+        // Set click listener for the whole item view
+        viewHolder.itemView.setOnClickListener {
+            onItemClick?.invoke(viewHolder.adapterPosition)
+        }
+
+        return viewHolder
     }
 
     override fun onBindViewHolder(holder: GridViewHolder, position: Int) {
@@ -27,7 +41,6 @@ class KamarAdapter(private val gridKamar: List<GridKamar>) :
         holder.t1.text = currentItem.t1
         holder.t2.text = currentItem.t2
         holder.t3.text = currentItem.t3
-
     }
 
     override fun getItemCount(): Int {

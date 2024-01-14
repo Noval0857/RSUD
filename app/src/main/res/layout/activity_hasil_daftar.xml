@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".HasilDaftarActivity">
+
+    <TextView
+        android:id="@+id/daftar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="PENDAFTARAN"
+        android:layout_marginBottom="8dp"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:gravity="center"/>
+
+    <TextView
+        android:id="@+id/nama"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Nama: "
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_below="@id/daftar"
+        android:layout_marginBottom="8dp"/>
+
+    <TextView
+        android:id="@+id/nik"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="NIK: "
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_below="@+id/nama"
+        android:layout_marginBottom="8dp"/>
+
+    <TextView
+        android:id="@+id/ttl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Tempat Tanggal Lahir: "
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_below="@+id/nik"
+        android:layout_marginBottom="8dp"/>
+
+    <TextView
+        android:id="@+id/noTelp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Nomor Telpon: "
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_below="@+id/ttl"
+        android:layout_marginBottom="8dp"/>
+
+    <TextView
+        android:id="@+id/noBpjs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="No BPJS: "
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_below="@+id/noTelp"
+        android:layout_marginBottom="8dp"/>
+
+    <TextView
+        android:id="@+id/ruangan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Ruangan: "
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_below="@+id/noBpjs"
+        android:layout_marginBottom="8dp"/>
+
+</RelativeLayout>
