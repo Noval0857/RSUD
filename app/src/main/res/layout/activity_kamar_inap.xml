@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".kamar.KamarInapActivity">
+
+    <RelativeLayout
+        android:id="@+id/topPanel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:ignore="MissingConstraints">
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="80dp"
+            android:background="#45A28C">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="350dp"
+                android:layout_height="250dp"
+                app:cardCornerRadius="20dp"
+                app:cardBackgroundColor="@android:color/white"
+                android:layout_gravity="center">
+
+                <ImageView
+                    android:layout_width="350dp"
+                    android:layout_height="250dp"
+                    android:src="@drawable/kamar"
+                    android:layout_gravity="center"
+                    android:scaleType="centerCrop" />
+            </androidx.cardview.widget.CardView>
+
+            <!--                <View-->
+            <!--                    android:layout_marginTop="20dp"-->
+            <!--                    android:layout_width="350dp"-->
+            <!--                    android:layout_height="250dp"-->
+            <!--                    android:background="@color/black"-->
+            <!--                    android:layout_gravity="center"-->
+            <!--                    />-->
+
+        </FrameLayout>
+
+    </RelativeLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+        app:layout_constraintTop_toBottomOf="@+id/topPanel"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:padding="16dp"
+        android:clipToPadding="false"
+        android:scrollbars="vertical"
+        android:layout_marginLeft="17dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
