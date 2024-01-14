@@ -11,7 +11,7 @@
     <LinearLayout
         android:id="@+id/layout_grid"
         android:layout_width="140dp"
-        android:layout_height="180dp"
+        android:layout_height="120dp"
         android:orientation="vertical">
 
         <TextView
@@ -19,25 +19,32 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="VIP"
-            android:layout_gravity="center"/>
+            android:layout_gravity="center"
+            android:layout_marginTop="5dp"/>
 
         <TextView
             android:id="@+id/t2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="100dp"
+            android:layout_height="30dp"
             android:text="Kosong : 0"
             android:layout_gravity="center"
-            android:background="#94C973"
+            android:background="@drawable/rounded_green"
             android:padding="8dp"
+            android:textSize="10sp"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/white"
             />
         <TextView
             android:id="@+id/t3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="100dp"
+            android:layout_height="30dp"
             android:text="Tempat Tidur : 1"
             android:layout_gravity="center"
-            android:background="#587498"
-            android:padding="8dp"/>
+            android:background="@drawable/rounded_blue"
+            android:padding="8dp"
+            android:textSize="10sp"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/white"/>
 
     </LinearLayout>
 

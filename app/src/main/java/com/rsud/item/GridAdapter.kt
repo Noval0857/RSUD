@@ -6,12 +6,12 @@ import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.rsud.R
 import com.rsud.apotek.ApotekActivity
-import com.rsud.daftar.DaftarInapActivity
 import com.rsud.daftar.DaftarJalanActivity
 import com.rsud.daftar.DaftarPoliKlinikActivity
-import com.rsud.R
 import com.rsud.item.GridItem
+import com.rsud.kamar.KamarInapActivity
 
 class GridAdapter(private val gridItems: List<GridItem>) :
     RecyclerView.Adapter<GridAdapter.GridViewHolder>() {
@@ -38,7 +38,7 @@ class GridAdapter(private val gridItems: List<GridItem>) :
             // Handle the click event
             val context = holder.itemView.context
             when (currentItem.title) {
-                "Rawat Inap" -> context.startActivity(Intent(context, DaftarInapActivity::class.java))
+                "Rawat Inap" -> context.startActivity(Intent(context, KamarInapActivity::class.java))
                 "Rawat Jalan" -> context.startActivity(Intent(context, DaftarJalanActivity::class.java))
                 "Poli Klinik" -> context.startActivity(Intent(context, DaftarPoliKlinikActivity::class.java))
                 "Apotik" -> context.startActivity(Intent(context, ApotekActivity::class.java))
